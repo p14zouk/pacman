@@ -89,9 +89,9 @@
             
             
              this.dots2 = this.add.physicsGroup();
-            this.map.createFromTiles(7, this.safetile, 'dot2', this.layer, this.dots);
-             this.dots2.setAll('x', 6, false, false, 1);
-            this.dots2.setAll('y',6, false, false, 1);
+            this.map.createFromTiles(35, this.safetile, 'dot2', this.layer, this.dots);
+             this.dots2.setAll('x', 34, false, false, 1);
+            this.dots2.setAll('y', 34, false, false, 1);
 
             //  Pacman should collide with everything except the safe tile
             this.map.setCollisionByExclusion([this.safetile], true, this.layer);
