@@ -95,17 +95,17 @@
             this.layer = this.map.createLayer('Pacman');
 
             this.dots = this.add.physicsGroup();
+            this.dots2 = this.add.physicsGroup();
             
             this.map.createFromTiles(7, this.safetile, 'dot', this.layer, this.dots);
-           
+            this.map.createFromTiles(35, this.safetile, 'dot2', this.layer, this.dots);
+            
             //  The dots will need to be offset by 6px to put them back in the middle of the grid
+            
             this.dots.setAll('x', 6, false, false, 1);
             this.dots.setAll('y', 6, false, false, 1);
-            
-            
-             this.dots2 = this.add.physicsGroup();
-            this.map.createFromTiles(35, this.safetile, 'dot2', this.layer, this.dots);
-             this.dots2.setAll('x', 6, false, false, 1);
+           
+            this.dots2.setAll('x', 6, false, false, 1);
             this.dots2.setAll('y', 6, false, false, 1);
 
             //  Pacman should collide with everything except the safe tile
@@ -125,7 +125,7 @@
             this.move(Phaser.LEFT);
 
             scoretext = game.add.text(10,0,'Exp: 0',{font: '20px    Lucida Console',  fill: '#FFFFFF'});
-            bonustext = game.add.text(200,0,'Rare Candies: 0', {font: '20px 	Lucida Console',  fill: '#FFFFFF'});
+            bonustext = game.add.text(100,0,'Rare Candies: 0', {font: '20px 	Lucida Console',  fill: '#FFFFFF'});
             lifetext = game.add.text(350,0,'Life: 3', {font: '20px 	Lucida Console',  fill: '#FFFFFF'});
         },
 
