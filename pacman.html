@@ -124,8 +124,8 @@
             this.pacman.play('munch');
             this.move(Phaser.LEFT);
 
-            scoretext = game.add.text(10,0,'Score: 0',{font: '20px    Lucida Console',  fill: '#FFFFFF'});
-            bonustext = game.add.text(200,0,'Bonus: 0', {font: '20px 	Lucida Console',  fill: '#FFFFFF'});
+            scoretext = game.add.text(10,0,'Exp: 0',{font: '20px    Lucida Console',  fill: '#FFFFFF'});
+            bonustext = game.add.text(200,0,'Rare Candies: 0', {font: '20px 	Lucida Console',  fill: '#FFFFFF'});
             lifetext = game.add.text(350,0,'Life: 3', {font: '20px 	Lucida Console',  fill: '#FFFFFF'});
         },
 
@@ -247,7 +247,7 @@
 
             dot.kill();
             score += 5;
-            scoretext.text='Score : ' + score;
+            scoretext.text='Exp : ' + score;
             var audio = new Audio('assets/pokeball.mp3');
             audio.play()
             
@@ -262,8 +262,8 @@
 
             dot2.kill();
             bonus += 25;
-            bonustext.text='Bonus : ' + bonus;
-            scoretext.text='Score : ' + bonus;
+            bonustext.text='Rare Candies : ' + bonus;
+            scoretext.text='Exp : ' + bonus;
             
             var audio = new Audio('assets/rare_candy.mp3');
             audio.play()
