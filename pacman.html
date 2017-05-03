@@ -247,7 +247,7 @@
 
             dot.kill();
             score += 5;
-            scoretext.text='Exp : ' + score + bonus;
+            scoretext.text='Exp : ' + (bonus+score);
             var audio = new Audio('assets/pokeball.mp3');
             audio.play()
             
@@ -263,7 +263,7 @@
             dot2.kill();
             bonus += 25;
             bonustext.text='Rare Candies : ' + bonus;
-            scoretext.text='Exp : ' + score + bonus;
+            scoretext.text='Exp : ' + (bonus+score);
             
             var audio = new Audio('assets/rare_candy.mp3');
             audio.play()
