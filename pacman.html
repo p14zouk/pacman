@@ -271,9 +271,10 @@
 
             if (this.dots2.total === 0)
             {
-                this.dots2.callAll('revive');
+            //    this.dots2.callAll('revive');
+                 this.dots2.call('revive');
             }
-
+                
         },
 
         update: function () {
