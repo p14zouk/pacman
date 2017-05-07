@@ -268,7 +268,7 @@
             this.current = direction;
 
         },
-        var timer = setInterval ( function(){}, 1000 );
+        var timer = setInterval ( function(){document.getElementById("seconds").innerHTML=pad(++sec);}, 1000 );
       
         if (timer %60 ===0){
              if (timer ===0){
