@@ -268,7 +268,10 @@
             this.current = direction;
 
         },
-        var timer = setInterval ( function(){document.getElementById("seconds").innerHTML=pad(++sec);}, 1000 );
+        var myCount = setInterval(function(){ myTimer() }, 1000);
+        function myTimer(){
+            var timer+=1;
+        }
       
         if (timer %60 ===0){
              if (timer ===0){
