@@ -269,9 +269,9 @@
 
         },
         
-        setInterval(function(){ myTimer() }, 1000);
-        function myTimer(){
-            var timer+=1;
+        function myTimer() {
+    setInterval(function(){ var timer +=1; }, 1000);
+
         if (timer %60 ===0){
              if (timer ===0){
             dot2.kill(all);
