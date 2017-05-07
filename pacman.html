@@ -79,11 +79,11 @@
 
             this.load.image('dot', 'assets/dot.png');
             this.load.image('dot2', 'assets/dot2.png');
-            this.load.image('dot2', 'assets/dot3.png');
-            this.load.image('dot2', 'assets/dot4.png');
-            this.load.image('dot2', 'assets/dot5.png');
-            this.load.image('dot2', 'assets/dot6.png');
-            this.load.image('dot2', 'assets/dot7.png');
+            this.load.image('dot3', 'assets/dot3.png');
+            this.load.image('dot4', 'assets/dot4.png');
+            this.load.image('dot5', 'assets/dot5.png');
+            this.load.image('dot6', 'assets/dot6.png');
+            this.load.image('dot7', 'assets/dot7.png');
             this.load.image('tiles', 'assets/pacman-tiles.png');
             this.load.spritesheet('pacman', 'assets/pacman.png', 32, 32);
             this.load.tilemap('map', 'assets/pacman-map.json', null, Phaser.Tilemap.TILED_JSON);
@@ -268,10 +268,10 @@
             this.current = direction;
 
         },
-        
-        myGameArea.frameNo += 1;
-        if (myGameArea.frameNo %60 ===0){
-             if (myGameArea.frameNo ===0){
+        var timer = setInterval ( function(){}, 1000 );
+      
+        if (timer %60 ===0){
+             if (timer ===0){
             dot2.kill(all);
         dot3.kill(all);
         dot4.kill(all);
