@@ -341,6 +341,11 @@
             this.physics.arcade.collide(this.pacman, this.layer);
             this.physics.arcade.overlap(this.pacman, this.dots, this.eatDot, null, this);
             this.physics.arcade.overlap(this.pacman, this.dots2, this.eatDot2, null, this);
+            this.physics.arcade.overlap(this.pacman, this.dots3, this.eatDot3, null, this);
+            this.physics.arcade.overlap(this.pacman, this.dots4, this.eatDot4, null, this);
+            this.physics.arcade.overlap(this.pacman, this.dots5, this.eatDot5, null, this);
+            this.physics.arcade.overlap(this.pacman, this.dots6, this.eatDot6, null, this);
+            this.physics.arcade.overlap(this.pacman, this.dots7, this.eatDot7, null, this);
             this.marker.x = this.math.snapToFloor(Math.floor(this.pacman.x), this.gridsize) / this.gridsize;
             this.marker.y = this.math.snapToFloor(Math.floor(this.pacman.y), this.gridsize) / this.gridsize;
             //  Update our grid sensors
