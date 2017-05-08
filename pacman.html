@@ -19,6 +19,8 @@
     </audio>
     
     <script type="text/javascript">
+    
+    var timer =0;
         
     var score=0;
     var scoretext;
@@ -212,6 +214,28 @@
             }
             this.current = direction;
         },
+        myTimer: function () {
+        setInterval(function(){ timer ++; }, 1000);
+
+        if (timer %60 ===0){
+             if (timer ===0){
+             dot2.kill(all);
+             dot3.kill(all);
+             dot4.kill(all);
+             dot5.kill(all);
+             dot6.kill(all);
+             dot7.kill(all);
+             }else{
+             var x = Math.floor((Math.random()*6)+1);
+             if (x===1){this.dots2.callAll('revive');}
+             if (x===2){this.dots3.callAll('revive');}
+             if (x===3){this.dots4.callAll('revive');}
+             if (x===4){this.dots5.callAll('revive');}
+             if (x===5){this.dots6.callAll('revive');}
+             if (x===6){this.dots7.callAll('revive');}
+        }
+        }
+         },
         eatDot: function (pacman, dot) {
             dot.kill();
             score += 5;
@@ -223,30 +247,30 @@
             {
                 this.dots.callAll('revive');
             }
-            if (score % 300 === 0)
-            {
-                this.dots2.callAll('revive');
-            }
-            if (score % 325 === 0)
-            {
-                this.dots3.callAll('revive');
-            }
-            if (score % 350 === 0)
-            {
-                this.dots4.callAll('revive');
-            }
-            if (score % 375 === 0)
-            {
-                this.dots5.callAll('revive');
-            }
-            if (score % 400 === 0)
-            {
-                this.dots6.callAll('revive');
-            }
-            if (score % 425 === 0)
-            {
-                this.dots6.callAll('revive');
-            }
+         //   if (score % 300 === 0)
+         //   {
+         //       this.dots2.callAll('revive');
+         //   }
+         //   if (score % 325 === 0)
+         //   {
+         //       this.dots3.callAll('revive');
+         //   }
+         //   if (score % 350 === 0)
+          //  {
+         //       this.dots4.callAll('revive');
+          //  }
+         //   if (score % 375 === 0)
+          //  {
+         //       this.dots5.callAll('revive');
+         //   }
+         //   if (score % 400 === 0)
+          //  {
+          //      this.dots6.callAll('revive');
+          //  }
+          //  if (score % 425 === 0)
+          //  {
+          //      this.dots6.callAll('revive');
+          //  }
         },
         
         eatDot2: function (pacman, dot2) {
