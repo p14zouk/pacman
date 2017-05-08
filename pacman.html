@@ -217,7 +217,7 @@
         myTimer: function () {
         setInterval(function(){ timer ++; }, 1000);
 
-        if (timer %60 ===0){
+        if (timer %10 ===0){
            //  if (timer ===0){
           //   dot2.kill(all);
           //   dot3.kill(all);
@@ -227,12 +227,12 @@
            //  dot7.kill(all);
            //  }else{
              var x = Math.floor((Math.random()*6)+1);
-             if (x===1){this.dots2.callAll('revive');}
-             if (x===2){this.dots3.callAll('revive');}
-             if (x===3){this.dots4.callAll('revive');}
-             if (x===4){this.dots5.callAll('revive');}
-             if (x===5){this.dots6.callAll('revive');}
-             if (x===6){this.dots7.callAll('revive');}
+             if (x<2){this.dots2.callAll('revive');}
+             if (x>2&&x<3){this.dots3.callAll('revive');}
+             if (x>3&&x<4){this.dots4.callAll('revive');}
+             if (x>4&&x<5){this.dots5.callAll('revive');}
+             if (x>5&&x<6){this.dots6.callAll('revive');}
+             if (x>6){this.dots7.callAll('revive');}
       //  }
         }
          },
