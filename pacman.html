@@ -218,6 +218,30 @@
             {
                 this.dots.callAll('revive');
             }
+            if (score % 300 === 0)
+            {
+                this.dots2.callAll('revive');
+            }
+            if (score % 325 === 0)
+            {
+                this.dots3.callAll('revive');
+            }
+            if (score % 350 === 0)
+            {
+                this.dots4.callAll('revive');
+            }
+            if (score % 375 === 0)
+            {
+                this.dots5.callAll('revive');
+            }
+            if (score % 400 === 0)
+            {
+                this.dots6.callAll('revive');
+            }
+            if (score % 425 === 0)
+            {
+                this.dots6.callAll('revive');
+            }
         },
         
         eatDot2: function (pacman, dot2) {
@@ -227,14 +251,7 @@
             scoretext.text='Exp : ' + (bonus+score);
             
             var audio = new Audio('assets/rare_candy.mp3');
-            audio.play()
-            
-        //    if (this.dots2.total === 0)
-         //   {
-        //        this.dots2.callAll('revive');
-               
-         //   }
-                
+            audio.play()         
         },
         
         eatDot3: function (pacman, dot3) {
