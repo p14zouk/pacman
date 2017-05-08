@@ -19,7 +19,7 @@
     </audio>
     
     <script type="text/javascript">
-        
+    var xrand=0;    
     var score=0;
     var scoretext;
         
@@ -219,32 +219,32 @@
             scoretext.text='Exp : ' + (bonus+score);
             var audio = new Audio('assets/pokeball.mp3');
             audio.play()
-            
+            xrand = Math.floor((Math.random()*10)+1;
             if (this.dots.total === 0)
             {
                 this.dots.callAll('revive');
             }
-            if (score % 300 === 0)
+            if (score % (xrand*50) === 0)
             {
                 this.dots2.callAll('revive');
             }
-            if (score % 325 === 0)
+            if (score % (xrand*55) === 0)
             {
                 this.dots3.callAll('revive');
             }
-            if (score % 350 === 0)
+            if (score % (xrand*60) === 0)
             {
                 this.dots4.callAll('revive');
             }
-            if (score % 375 === 0)
+            if (score % (xrand*65) === 0)
             {
                 this.dots5.callAll('revive');
             }
-            if (score % 400 === 0)
+            if (score % (xrand*75) === 0)
             {
                 this.dots6.callAll('revive');
             }
-            if (score % 425 === 0)
+            if (score % (xrand*80) === 0)
             {
                 this.dots6.callAll('revive');
             }
