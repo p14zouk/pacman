@@ -19,7 +19,7 @@
     </audio>
     
     <script type="text/javascript">
-    
+    var randomdot =0;
     var timer =0;
         
     var score=0;
@@ -218,22 +218,22 @@
         setInterval(function(){ timer ++; }, 1000);
 
         if (timer %10 ===0){
-             if (x===0){
+             if (rundomdot===0){
              dot2.kill(all);
              dot3.kill(all);
              dot4.kill(all);
              dot5.kill(all);
              dot6.kill(all);
              dot7.kill(all);
-                 x=1;
+                 randomdot=1;
              }else{
-             var x = Math.floor((Math.random()*6)+1);
-             if (x<2){this.dots2.callAll('revive');}
-             if (x>2&&x<3){this.dots3.callAll('revive');}
-             if (x>3&&x<4){this.dots4.callAll('revive');}
-             if (x>4&&x<5){this.dots5.callAll('revive');}
-             if (x>5&&x<6){this.dots6.callAll('revive');}
-             if (x>6){this.dots7.callAll('revive');}
+             randomdot = Math.floor((Math.random()*6)+1);
+             if (randomdot<2){this.dots2.callAll('revive');}
+             if (randomdot>2&&randomdot<3){this.dots3.callAll('revive');}
+             if (randomdot>3&&randomdot<4){this.dots4.callAll('revive');}
+             if (randomdot>4&&randomdot<5){this.dots5.callAll('revive');}
+             if (randomdot>5&&randomdot<6){this.dots6.callAll('revive');}
+             if (randomdot>6){this.dots7.callAll('revive');}
         }
         }
          },
