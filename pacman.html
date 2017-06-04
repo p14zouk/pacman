@@ -29,7 +29,7 @@
     var life=3;
     var lifetext;
         
-    var timer=0;
+    int timer=0;
     var timetext;
    
    
@@ -350,8 +350,9 @@
                 this.turn();
             }
             
-        
-            game.debug.text('Time: ' + this.game.time.totalElapsedSeconds(), 150, 50);
+            timer=this.game.time.totalElapsedSeconds();
+          
+            game.debug.text('Time: ' + timer, 150, 50);
         }
     };
     game.state.add('Game', Pacman, true);
