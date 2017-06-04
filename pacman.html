@@ -218,8 +218,9 @@
         },
         
       //  myTimer: function () {
-        timer = setInterval(function(){ 
-            var x ++; 
+        var starttimer = setInterval(function(){
+        timer ++;
+        timetext.text='Time : ' + timer;
         }, 1000);
         },
             
