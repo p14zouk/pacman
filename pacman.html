@@ -31,7 +31,7 @@
         
     var timer=0;
     var timetext;
-    long tStart = System.currentTimeMillis();
+   
    
         
         
@@ -349,10 +349,9 @@
             {
                 this.turn();
             }
-            long tEnd = System.currentTimeMillis();
-            long tDelta = tEnd - tStart;
-            double elapsedSeconds = tDelta / 1000.0;
-            game.debug.text('Time: ' + elapsedSeconds, 150, 50);
+            
+        
+            game.debug.text('Time: ' + this.game.time.totalElapsedSeconds(), 150, 50);
         }
     };
     game.state.add('Game', Pacman, true);
