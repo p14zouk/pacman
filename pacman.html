@@ -29,8 +29,6 @@
     var life=3;
     var lifetext;
         
-    var timer=0;
-    var timetext;
    
    
         
@@ -127,7 +125,7 @@
             scoretext = game.add.text(10,0,'Exp: 0',{font: '20px    Lucida Sans Unicode',  fill: '#FFFFFF'});
             bonustext = game.add.text(150,0,'Rare Candies: 0', {font: '20px 	Lucida Sans Unicode',  fill: '#FFFFFF'});
             lifetext = game.add.text(380,0,'Life: 3', {font: '20px 	Lucida Sans Unicode',  fill: '#FFFFFF'});
-       //     timetext = game.add.text(150,20,'Time: 0', {font: '20px 	Lucida Sans Unicode',  fill: '#FFFFFF'});
+      
         },
         checkKeys: function () {
             if (this.cursors.left.isDown && this.current !== Phaser.LEFT)
@@ -219,12 +217,7 @@
             this.current = direction;
         },
         
-       // myTimer: function () {  var starttimer = setInterval(function(){
-       // timer ++;
-       // timetext.text='Time : ' + timer;
-       // }, 1000);
-      //  },
-        
+
       
             
         eatDot: function (pacman, dot) {
