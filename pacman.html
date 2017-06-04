@@ -29,7 +29,7 @@
     var life=3;
     var lifetext;
         
-    int timer=0;
+    var timer=0;
     var timetext;
    
    
@@ -350,7 +350,7 @@
                 this.turn();
             }
             
-            timer=this.game.time.totalElapsedSeconds();
+            timer=this.game.time.totalElapsedSeconds() div 1;
           
             game.debug.text('Time: ' + timer, 150, 50);
         }
